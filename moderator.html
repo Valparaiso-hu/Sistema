@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Modo Moderador</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <h1>Modo Moderador</h1>
+      <div id="user-area"></div>
+    </div>
+
+    <div>
+      <h3>Registrar vehículo a usuario</h3>
+      <div class="field">
+        <label>Buscar usuario (username#discriminator o discord id)</label>
+        <input id="search-user" placeholder="ej: bauti#1234 o 123456789012345678"/>
+        <button id="btn-search-user">Buscar</button>
+        <div id="search-results"></div>
+      </div>
+
+      <div class="field">
+        <label>O especifica Discord ID</label>
+        <input id="target-discord-id" placeholder="Discord ID"/>
+      </div>
+
+      <div class="field">
+        <label>Placa</label><input id="v-plate" placeholder="ABC123"/>
+      </div>
+      <div class="field">
+        <label>Modelo</label><input id="v-model" placeholder="Toyota Corolla"/>
+      </div>
+      <div class="field">
+        <label>Color</label><input id="v-color" placeholder="Blanco"/>
+      </div>
+      <div class="field">
+        <label>Notas</label><input id="v-notes" placeholder="Notas opcionales"/>
+      </div>
+      <div><button id="btn-register-vehicle">Registrar vehículo</button></div>
+
+      <hr/>
+      <h3>Vehículos registrados (todos)</h3>
+      <div id="all-vehicles"></div>
+    </div>
+
+    <div style="margin-top:12px">
+      <a class="btn" href="/logout">Cerrar sesión</a>
+      <a class="btn" href="/">Volver</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', ()=> {
+      scriptLoadMeAndAllVehicles(); // valida moderador y carga
+    });
+  </script>
+</body>
+</html>

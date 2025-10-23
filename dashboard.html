@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Mis Vehículos</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <h1>Mis Vehículos</h1>
+      <div id="user-area"></div>
+    </div>
+
+    <div id="content">
+      <div id="vehicles-list"></div>
+      <p class="note">Si no ves vehículos, aún no tienes ninguno asignado.</p>
+    </div>
+
+    <div style="margin-top:12px">
+      <a class="btn" href="/logout">Cerrar sesión</a>
+      <a class="btn" href="/">Volver</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // carga inicial
+    window.addEventListener('DOMContentLoaded', ()=> {
+      scriptLoadMeAndVehicles();
+    });
+  </script>
+</body>
+</html>
